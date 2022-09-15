@@ -1926,8 +1926,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.0000080675, y: 29.39}
-  m_SizeDelta: {x: 143.06, y: 33.21}
+  m_AnchoredPosition: {x: 0.000015989, y: 22.997}
+  m_SizeDelta: {x: 143.06, y: 45.995}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1147601357
 MonoBehaviour:
@@ -1962,7 +1962,11 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "DigitalAkuma\r\nnatalie\r"
+  m_Text: 'DigitalAkuma
+
+    natalie
+
+    irene'
 --- !u!222 &1147601358
 CanvasRenderer:
   m_ObjectHideFlags: 0
