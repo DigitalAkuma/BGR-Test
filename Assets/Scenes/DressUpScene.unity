@@ -6766,9 +6766,9 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 95867f9e31cebaf45beb304bcce07474, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 5cc6d498763328b48be2877931771ab7, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.504
+  m_Volume: 0.232
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -18764,7 +18764,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1030942836}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1576815476}
+        m_TargetAssemblyTypeName: ButtonUI, Assembly-CSharp
+        m_MethodName: LoadScene
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: CreditsScene
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1034723115
 GameObject:
   m_ObjectHideFlags: 0
