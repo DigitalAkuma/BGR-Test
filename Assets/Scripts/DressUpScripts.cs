@@ -474,13 +474,14 @@ public class DressUpScripts : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        LoginScreen.SetActive(true);
+        LoginScreen.SetActive(false);
         MainFrame.SetActive(false);
         MainScreen.SetActive(false);
         Step123.SetActive(false);
         Step1.SetActive(false);
         Step2.SetActive(false);
         Step3.SetActive(false);
+        initGame();
     }
 
     public void login()
