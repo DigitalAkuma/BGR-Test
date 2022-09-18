@@ -23,4 +23,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/RulesScene.unity
     guid: 6ff5af0c46a3c40408819f5f1d7ca1e9
+  - enabled: 1
+    path: Assets/Scenes/NEWDressUpScene.unity
+    guid: 17c5f5456d38c004995952526e768b9d
   m_configObjects: {}
