@@ -10,7 +10,7 @@ public class ApplyClothing : MonoBehaviour
 
     void Start()
     {
-        hair_carousel = new Carousel(GameObject.Find("hair_carousel"), 6);
+        hair_carousel = new Carousel(GameObject.Find("hair_carousel"), 15, 4);
     }
 
     public void MoveCarousel()
@@ -32,8 +32,10 @@ public class ApplyClothing : MonoBehaviour
         if (direction == "right" || direction == "down")
         {
             //AdvanceCarousel(carousel);
-        } else {
-           // ReverseCarousel(carousel);
+        }
+        else
+        {
+            // ReverseCarousel(carousel);
         }
 
     }

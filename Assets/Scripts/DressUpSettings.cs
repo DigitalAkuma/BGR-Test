@@ -6,7 +6,6 @@ public class DressUpSettings : MonoBehaviour
 {
     public static DressUpSettings Instance;
 
-
     private void Awake()
     {
         if (Instance != null)
