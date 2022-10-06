@@ -350,7 +350,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 6e4a89859463bcd40928fc4048044686, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.553
+  m_Volume: 0.342
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -849,7 +849,7 @@ GameObject:
   - component: {fileID: 768901336}
   - component: {fileID: 768901335}
   m_Layer: 5
-  m_Name: Start
+  m_Name: bt_start
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
