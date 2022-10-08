@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class Carousel
+public class Carousel : MonoBehaviour
 {
     public string name;
     public GameObject wheel; //gameobject containing all ui things
@@ -13,19 +13,20 @@ public class Carousel
     public int currentPos; //which number is in the start position
     public List<Button> moveButtons;
     public List<Button> slotButtons;
+
+    //All sprite assets referenced by string
     public List<Dictionary<string, Sprite>> Assets; //list of dictionaries containign assets ORDERED
     public GameObject selected; //the gameobject of the selection image
     public int selectedAsset; //which asset is selected;
 
-    public Carousel(GameObject wheel, int slotCount)
+    //Carousels - hair, lips, eyes
+    public void Start()
     {
         string[] splits = wheel.name.Split('_');
 
         this.name = splits[0];
-        this.wheel = wheel;
-        this.slotCount = slotCount;
         this.currentPos = 1;
-        this.selected = wheel.transform.Find("selected").gameObject;
+        this.selected = wheel.transform.Find("selected").gameObject; //thumbnail dashes
         this.selectedAsset = 0;
 
         Assets = new List<Dictionary<string, Sprite>>();
@@ -37,7 +38,8 @@ public class Carousel
 
         while (valid == true)
         {
-            Sprite[] allResources = Resources.LoadAll<Sprite>("DressUpAssets/" + name + "/" + name + i);
+            //Array of 2D Sprites[] from Resources/DressUpAssets/
+            Sprite[] allResources = Resources.LoadAll<Sprite>("DressUpAssets/" + name + "/" + name + i); //Note: Possible performance issue if we do this for each carousel...
             if (allResources != null && allResources.Length != 0)
             {
                 Dictionary<string, Sprite> currentDict = new Dictionary<string, Sprite>();

@@ -683,6 +683,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 78258115}
+  - component: {fileID: 78258116}
   m_Layer: 5
   m_Name: hair_carousel
   m_TagString: Untagged
@@ -717,6 +718,27 @@ RectTransform:
   m_AnchoredPosition: {x: 39.07, y: 76.5}
   m_SizeDelta: {x: 348.34, y: 97.06}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &78258116
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 78258114}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac5015b1b427ad941b38a9c42e7e1806, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  name: 
+  wheel: {fileID: 0}
+  slotCount: 0
+  resourceCount: 0
+  currentPos: 0
+  moveButtons: []
+  slotButtons: []
+  selected: {fileID: 0}
+  selectedAsset: 0
 --- !u!1 &104392581
 GameObject:
   m_ObjectHideFlags: 0
@@ -8709,6 +8731,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1177079279}
   - component: {fileID: 1177079281}
+  - component: {fileID: 1177079280}
   m_Layer: 5
   m_Name: lips_carousel
   m_TagString: Untagged
@@ -8741,6 +8764,27 @@ RectTransform:
   m_AnchoredPosition: {x: 158, y: -89.799995}
   m_SizeDelta: {x: 204, y: 118}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1177079280
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1177079278}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac5015b1b427ad941b38a9c42e7e1806, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  name: 
+  wheel: {fileID: 0}
+  slotCount: 0
+  resourceCount: 0
+  currentPos: 0
+  moveButtons: []
+  slotButtons: []
+  selected: {fileID: 0}
+  selectedAsset: 0
 --- !u!222 &1177079281
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -15495,6 +15539,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1998376679}
   - component: {fileID: 1998376681}
+  - component: {fileID: 1998376680}
   m_Layer: 5
   m_Name: eyes_carousel
   m_TagString: Untagged
@@ -15527,6 +15572,27 @@ RectTransform:
   m_AnchoredPosition: {x: -63.8, y: -89.8}
   m_SizeDelta: {x: 204, y: 118}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1998376680
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1998376678}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac5015b1b427ad941b38a9c42e7e1806, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  name: 
+  wheel: {fileID: 0}
+  slotCount: 0
+  resourceCount: 0
+  currentPos: 0
+  moveButtons: []
+  slotButtons: []
+  selected: {fileID: 0}
+  selectedAsset: 0
 --- !u!222 &1998376681
 CanvasRenderer:
   m_ObjectHideFlags: 0
