@@ -9,47 +9,15 @@ using System.Linq;
 /*
  * Data structure for all dress up assets grabbed from Resources folder
  */
-[ExecuteInEditMode]
+//[ExecuteInEditMode]
 public class AssetPool : MonoBehaviour
 {
     [SerializeField]
-    List<StringDressTextureDictionary> assetDictionaries;
-
+    List<StringDressTextureDictionary> eyes = new List<StringDressTextureDictionary>();
     [SerializeField]
-    List<string> resources_dressUpAssets_subdirectories;
-
-    private void Start()
-    {
-
-        resources_dressUpAssets_subdirectories = System.IO.Directory.GetDirectories("DressUpAssets/").ToList<string>();
-        
-        //Fill up the dictionaries by going through the resources directory, matching asset names
-
-        /*
-         * Algorithm for directory names...
-         * 
-         * Root directory = DressUpAssets/
-         * Subs = Body, Bottoms, Eyes, ... = brand new StringDressTextureDictionary per sub folder
-         * 
-         * For each *subfolder* found within sub...
-         * - Create a new entry in the dictionary
-         * - Set the entry's string key to *subfolder* name 
-         * - Look inside that folder and grab the Sprites called colourable and texture and place them
-         * into the DressUpTextureBundle
-         * 
-         */
-
-        //Array of 2D Sprites[] from a subdirectory
-        Sprite[] resources;
-        string subDirectory;
-
-        foreach (string sub in resources_dressUpAssets_subdirectories)
-        {
-            assetDictionaries.Add(new StringDressTextureDictionary());
-            subDirectory = "DressUpAssets/" + sub;
-            //resources = Resources.LoadAll<Sprite>(subDirectory + "/" + name + i);
-        }
-    }
+    List<StringDressTextureDictionary> hair = new List<StringDressTextureDictionary>();
+    [SerializeField]
+    List<StringDressTextureDictionary> lips = new List<StringDressTextureDictionary>();
 }
 
 /*
@@ -73,9 +41,9 @@ public class AssetPool : MonoBehaviour
 [Serializable]
 public class DressUpTextureBundle 
 {
-    public Sprite colourable;
-    public Sprite texture;
-    public Sprite background;
+    public Sprite? colourable;
+    public Sprite? texture;
+    public Sprite? background;
 }
 
 [Serializable]

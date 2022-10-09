@@ -13702,6 +13702,124 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: -0.0007019}
   m_SizeDelta: {x: 1023, y: 762}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &1784805095
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1784805098}
+  - component: {fileID: 1784805097}
+  - component: {fileID: 1784805096}
+  m_Layer: 5
+  m_Name: Dress-up Asset Pool
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1784805096
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1784805095}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f5a8f1a4c6d5a7949a6f569beab5da54, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  eyes:
+  - m_keys:
+    - eyes1
+    m_values:
+    - colourable: {fileID: 0}
+      texture: {fileID: 0}
+      background: {fileID: 21300000, guid: 0e5b881c05af51f4aa5a3de2ec3f1468, type: 3}
+  - m_keys:
+    - eyes2
+    m_values:
+    - colourable: {fileID: 0}
+      texture: {fileID: 0}
+      background: {fileID: 0}
+  - m_keys:
+    - eyes3
+    m_values:
+    - colourable: {fileID: 0}
+      texture: {fileID: 0}
+      background: {fileID: 0}
+  - m_keys:
+    - eyes4
+    m_values:
+    - colourable: {fileID: 0}
+      texture: {fileID: 0}
+      background: {fileID: 0}
+  - m_keys:
+    - eyes5
+    m_values:
+    - colourable: {fileID: 0}
+      texture: {fileID: 0}
+      background: {fileID: 0}
+  - m_keys:
+    - eyes6
+    m_values:
+    - colourable: {fileID: 0}
+      texture: {fileID: 0}
+      background: {fileID: 0}
+  - m_keys:
+    - eyes7
+    m_values:
+    - colourable: {fileID: 0}
+      texture: {fileID: 0}
+      background: {fileID: 0}
+  - m_keys:
+    - eyes8
+    m_values:
+    - colourable: {fileID: 0}
+      texture: {fileID: 0}
+      background: {fileID: 0}
+  hair: []
+  lips:
+  - m_keys: []
+    m_values: []
+  - m_keys: []
+    m_values: []
+--- !u!114 &1784805097
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1784805095}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6ce8f7312e3854744b6121398d5fa9f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  changeables:
+  - {fileID: 0}
+--- !u!224 &1784805098
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1784805095}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 90}
+  m_LocalScale: {x: 0.013033561, y: 0.013033561, z: 0.013033561}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 20101.771, y: -621.7119}
+  m_SizeDelta: {x: 263.02, y: 455.09}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1791541875
 GameObject:
   m_ObjectHideFlags: 0
@@ -14035,7 +14153,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1850866675}
   - component: {fileID: 1850866676}
-  - component: {fileID: 1850866677}
   m_Layer: 5
   m_Name: dressup
   m_TagString: Untagged
@@ -14090,63 +14207,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   changeables:
   - {fileID: 0}
---- !u!114 &1850866677
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1850866674}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f5a8f1a4c6d5a7949a6f569beab5da54, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  body:
-    m_keys:
-    - body
-    - fist
-    - head
-    m_values:
-    - colourable: {fileID: 21300000, guid: adee673b1ec0a2b4eb27021b9e1be022, type: 3}
-      textureOrBackground: {fileID: 0}
-    - colourable: {fileID: 21300000, guid: 95190c7d043a48742b0a3a8ee9fab5ca, type: 3}
-      textureOrBackground: {fileID: 0}
-    - colourable: {fileID: 21300000, guid: 399c0f2ee2d9426499131eba391fc31b, type: 3}
-      textureOrBackground: {fileID: 0}
-  bottoms:
-    m_keys:
-    - bottom1
-    m_values:
-    - colourable: {fileID: 21300000, guid: 426e5c0df2a7bce4cb61c532bab1af7e, type: 3}
-      textureOrBackground: {fileID: 21300000, guid: 376d4510d36cfb54e86d7ac747aa6cee, type: 3}
-  eyes:
-    m_keys: []
-    m_values: []
-  hair:
-    m_keys: []
-    m_values: []
-  jewelry:
-    m_keys: []
-    m_values: []
-  lips:
-    m_keys: []
-    m_values: []
-  more:
-    m_keys: []
-    m_values: []
-  purses:
-    m_keys: []
-    m_values: []
-  shoes:
-    m_keys: []
-    m_values: []
-  sleeves:
-    m_keys: []
-    m_values: []
-  tops:
-    m_keys: []
-    m_values: []
 --- !u!1 &1853707360
 GameObject:
   m_ObjectHideFlags: 0
