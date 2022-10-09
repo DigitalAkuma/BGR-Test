@@ -6103,52 +6103,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 781852663}
   m_CullTransparentMesh: 1
---- !u!1 &786792408
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 786792410}
-  - component: {fileID: 786792409}
-  m_Layer: 0
-  m_Name: Asset Pool
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &786792409
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 786792408}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f5a8f1a4c6d5a7949a6f569beab5da54, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  assetDictionary:
-    m_keys: []
-    m_values: []
---- !u!4 &786792410
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 786792408}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.9345788, y: 0.15789485, z: -2.923189}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 6
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &824018950
 GameObject:
   m_ObjectHideFlags: 0
@@ -14148,12 +14102,51 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f5a8f1a4c6d5a7949a6f569beab5da54, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  assetDictionary:
+  body:
     m_keys:
-    - 
+    - body
+    - fist
+    - head
     m_values:
-    - colourable: {fileID: 0}
+    - colourable: {fileID: 21300000, guid: adee673b1ec0a2b4eb27021b9e1be022, type: 3}
       textureOrBackground: {fileID: 0}
+    - colourable: {fileID: 21300000, guid: 95190c7d043a48742b0a3a8ee9fab5ca, type: 3}
+      textureOrBackground: {fileID: 0}
+    - colourable: {fileID: 21300000, guid: 399c0f2ee2d9426499131eba391fc31b, type: 3}
+      textureOrBackground: {fileID: 0}
+  bottoms:
+    m_keys:
+    - bottom1
+    m_values:
+    - colourable: {fileID: 21300000, guid: 426e5c0df2a7bce4cb61c532bab1af7e, type: 3}
+      textureOrBackground: {fileID: 21300000, guid: 376d4510d36cfb54e86d7ac747aa6cee, type: 3}
+  eyes:
+    m_keys: []
+    m_values: []
+  hair:
+    m_keys: []
+    m_values: []
+  jewelry:
+    m_keys: []
+    m_values: []
+  lips:
+    m_keys: []
+    m_values: []
+  more:
+    m_keys: []
+    m_values: []
+  purses:
+    m_keys: []
+    m_values: []
+  shoes:
+    m_keys: []
+    m_values: []
+  sleeves:
+    m_keys: []
+    m_values: []
+  tops:
+    m_keys: []
+    m_values: []
 --- !u!1 &1853707360
 GameObject:
   m_ObjectHideFlags: 0

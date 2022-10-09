@@ -2,39 +2,52 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Windows;
+using System.IO;
+using System.Linq;
 
 /*
- * Data structure for all dress up assets
+ * Data structure for all dress up assets grabbed from Resources folder
  */
+[ExecuteInEditMode]
 public class AssetPool : MonoBehaviour
 {
     [SerializeField]
-    StringDressTextureDictionary assetDictionary;
+    List<StringDressTextureDictionary> assetDictionaries;
+
+    [SerializeField]
+    List<string> resources_dressUpAssets_subdirectories;
 
     private void Start()
     {
-        //loop through each folder in relevant asset folder, add to dictionary 
-        //keeps going until no more assets can be found
-        int i = 1;
-        bool valid = true;
 
-        while (valid == true)
+        resources_dressUpAssets_subdirectories = System.IO.Directory.GetDirectories("DressUpAssets/").ToList<string>();
+        
+        //Fill up the dictionaries by going through the resources directory, matching asset names
+
+        /*
+         * Algorithm for directory names...
+         * 
+         * Root directory = DressUpAssets/
+         * Subs = Body, Bottoms, Eyes, ... = brand new StringDressTextureDictionary per sub folder
+         * 
+         * For each *subfolder* found within sub...
+         * - Create a new entry in the dictionary
+         * - Set the entry's string key to *subfolder* name 
+         * - Look inside that folder and grab the Sprites called colourable and texture and place them
+         * into the DressUpTextureBundle
+         * 
+         */
+
+        //Array of 2D Sprites[] from a subdirectory
+        Sprite[] resources;
+        string subDirectory;
+
+        foreach (string sub in resources_dressUpAssets_subdirectories)
         {
-            //Array of 2D Sprites[] from Resources/DressUpAssets/
-            Sprite[] allResources = Resources.LoadAll<Sprite>("DressUpAssets/" + name + "/" + name + i);
-            if (allResources != null && allResources.Length != 0)
-            {
-                Dictionary<string, Sprite> currentDict = new Dictionary<string, Sprite>();
-                foreach (Sprite texture in allResources)
-                {
-                   //do something
-                }
-                i++;
-            }
-            else
-            {
-                valid = false;
-            }
+            assetDictionaries.Add(new StringDressTextureDictionary());
+            subDirectory = "DressUpAssets/" + sub;
+            //resources = Resources.LoadAll<Sprite>(subDirectory + "/" + name + i);
         }
     }
 }
@@ -61,7 +74,8 @@ public class AssetPool : MonoBehaviour
 public class DressUpTextureBundle 
 {
     public Sprite colourable;
-    public Sprite textureOrBackground;
+    public Sprite texture;
+    public Sprite background;
 }
 
 [Serializable]
