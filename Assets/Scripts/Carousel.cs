@@ -39,7 +39,8 @@ public class Carousel : MonoBehaviour
         while (valid == true)
         {
             //Array of 2D Sprites[] from Resources/DressUpAssets/
-            Sprite[] allResources = Resources.LoadAll<Sprite>("DressUpAssets/" + name + "/" + name + i); //Note: Possible performance issue if we do this for each carousel...
+            //This loop searches for thumbnail textures to place into the slots
+            Sprite[] allResources = Resources.LoadAll<Sprite>("DressUpAssets/" + name + "/" + name + i); 
             if (allResources != null && allResources.Length != 0)
             {
                 Dictionary<string, Sprite> currentDict = new Dictionary<string, Sprite>();
@@ -68,6 +69,7 @@ public class Carousel : MonoBehaviour
         moveButtons = new List<Button>();
         slotButtons = new List<Button>();
 
+        //Search for buttons in the carousel game object's children
         foreach (Transform child in wheel.transform) 
         {
             if (child.gameObject.GetComponent<Button>()) 
@@ -105,7 +107,7 @@ public class Carousel : MonoBehaviour
         }
     }
 
-    //Slot button clicked - should apply texture to model
+    //Slot button clicked - selects a thumbnail
     void SlotButtonClicked(Button myButton)
     {
         if (myButton.gameObject.transform.Find("selected"))

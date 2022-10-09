@@ -6132,6 +6132,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f5a8f1a4c6d5a7949a6f569beab5da54, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  assetDictionary:
+    m_keys: []
+    m_values: []
 --- !u!4 &786792410
 Transform:
   m_ObjectHideFlags: 0
@@ -14078,6 +14081,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1850866675}
   - component: {fileID: 1850866676}
+  - component: {fileID: 1850866677}
   m_Layer: 5
   m_Name: dressup
   m_TagString: Untagged
@@ -14132,6 +14136,24 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   changeables:
   - {fileID: 0}
+--- !u!114 &1850866677
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1850866674}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f5a8f1a4c6d5a7949a6f569beab5da54, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  assetDictionary:
+    m_keys:
+    - 
+    m_values:
+    - colourable: {fileID: 0}
+      textureOrBackground: {fileID: 0}
 --- !u!1 &1853707360
 GameObject:
   m_ObjectHideFlags: 0
