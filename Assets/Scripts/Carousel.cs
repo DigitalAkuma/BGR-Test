@@ -160,6 +160,8 @@ public class Carousel : MonoBehaviour
                 dressupModel.ChangeEyes(eyesBundle.background, eyesBundle.colourable);
                 break;
             case "lips":
+                DressUpTextureBundle lipsBundle = assetPool.lips[thumbnail];
+                dressupModel.ChangeLips(lipsBundle.texture, lipsBundle.colourable);
                 break;
 
         }

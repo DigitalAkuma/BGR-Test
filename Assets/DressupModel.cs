@@ -16,6 +16,9 @@ public class DressupModel : MonoBehaviour
 
     public StringGameObjectDictionary lipsReferences;
 
+    [SerializeField]
+    Sprite blank;
+
     public void ChangeEyes(Sprite background, Sprite colourable)
     {
         //Set the key, which will reference the game object with the sprite to change
@@ -37,12 +40,47 @@ public class DressupModel : MonoBehaviour
 
     public void ChangeLips(Sprite texture, Sprite colourable)
     {
+        //Set the key, which will reference the game object with the sprite to change
+        ICollection<string> keys = lipsReferences.Keys;
 
+        foreach (string key in keys)
+        {
+            switch (key)
+            {
+                case "texture":
+                    if (texture != null) lipsReferences[key].GetComponent<Image>().sprite = texture;
+                    else lipsReferences[key].GetComponent<Image>().sprite = blank;
+                    break;
+                case "colourable":
+                    lipsReferences[key].GetComponent<Image>().sprite = colourable;
+                    break;
+            }
+        }
     }
 
     public void ChangeHair(Sprite textureFront, Sprite textureBack, Sprite colourableFront, Sprite colourableBack)
     {
+        //Set the key, which will reference the game object with the sprite to change
+        ICollection<string> keys = lipsReferences.Keys;
 
+        foreach (string key in keys)
+        {
+            switch (key)
+            {
+                case "texture_front":
+                    hairReferences[key].GetComponent<Image>().sprite = textureFront;
+                    break;
+                case "texture_back":
+                    hairReferences[key].GetComponent<Image>().sprite = textureBack;
+                    break;
+                case "colourable_front":
+                    hairReferences[key].GetComponent<Image>().sprite = colourableFront;
+                    break;
+                case "colourable_back":
+                    hairReferences[key].GetComponent<Image>().sprite = colourableBack;
+                    break;
+            }
+        }
     }
 
     /*
