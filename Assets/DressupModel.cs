@@ -19,23 +19,32 @@ public class DressupModel : MonoBehaviour
     [SerializeField]
     Sprite blank;
 
-    public void ChangeEyes(Sprite background, Sprite colourable)
+    public void ChangeEyes(Sprite background, Sprite colourable, Sprite texture)
     {
         //Set the key, which will reference the game object with the sprite to change
         ICollection<string> keys = eyesReferences.Keys;
 
-        foreach (string key in keys)
+        if (colourable == null && background == null)
         {
-            switch(key)
+            eyesReferences["background"].GetComponent<Image>().sprite = texture;
+            eyesReferences["colourable"].GetComponent<Image>().sprite = texture;
+        }
+        else
+        {
+            foreach (string key in keys)
             {
-                case "background":
-                    eyesReferences[key].GetComponent<Image>().sprite = background;
-                    break;
-                case "colourable":
-                    eyesReferences[key].GetComponent<Image>().sprite = colourable;
-                    break;
+                switch (key)
+                {
+                    case "background":
+                        eyesReferences[key].GetComponent<Image>().sprite = background;
+                        break;
+                    case "colourable":
+                        eyesReferences[key].GetComponent<Image>().sprite = colourable;
+                        break;
+                }
             }
         }
+        
     }
 
     public void ChangeLips(Sprite texture, Sprite colourable)
