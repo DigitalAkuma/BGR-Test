@@ -5,19 +5,95 @@ using UnityEngine;
 using UnityEngine.Windows;
 using System.IO;
 using System.Linq;
+using static UnityEngine.Rendering.VirtualTexturing.Debugging;
 
 /*
  * Data structure for all dress up assets grabbed from Resources folder
  */
-//[ExecuteInEditMode]
+[ExecuteInEditMode]
 public class AssetPool : MonoBehaviour
 {
     [SerializeField]
-    List<StringDressTextureDictionary> eyes = new List<StringDressTextureDictionary>();
+    StringDressTextureDictionary eyes = new StringDressTextureDictionary();
     [SerializeField]
-    List<StringDressTextureDictionary> hair = new List<StringDressTextureDictionary>();
+    StringHairTextureDictionary hair;
+
     [SerializeField]
-    List<StringDressTextureDictionary> lips = new List<StringDressTextureDictionary>();
+    StringDressTextureDictionary lips;
+
+    //called when something in the scene has changed
+    private void Update()
+    {
+        GrabHairAssets();
+        GrabLipsAssets();
+    }
+
+    void GrabHairAssets()
+    {
+        hair = new StringHairTextureDictionary();
+        int i = 1;
+        string path = "DressUpAssets/Hair";
+        Sprite[] resources;
+        HairTextureBundle bundle;
+
+        for (i = 1; i <= 15; i++)
+        {
+            bundle = new HairTextureBundle();
+            resources = Resources.LoadAll<Sprite>(path + "/" + "hair" + i);
+            hair.Add("hair" + i, bundle);
+
+            foreach (Sprite sprite in resources)
+            {
+                switch(sprite.name)
+                {
+                    case "colourable_front":
+                        bundle.colourableFront = sprite;
+                    break;
+                    case "colourable_back":
+                        bundle.colourableBack = sprite;
+                    break;
+                    case "texture_front":
+                        bundle.textureFront = sprite;
+                    break;
+                    case "texture_back":
+                        bundle.textureBack = sprite;
+                    break;
+                }
+            }
+        }
+    }
+
+    void GrabLipsAssets()
+    {
+        lips = new StringDressTextureDictionary();
+        int i = 1;
+        string path = "DressUpAssets/Lips";
+        Sprite[] resources;
+        DressUpTextureBundle bundle;
+
+        for (i = 1; i <= 5; i++)
+        {
+            bundle = new DressUpTextureBundle();
+            resources = Resources.LoadAll<Sprite>(path + "/" + "lips" + i);
+            lips.Add("lips" + i, bundle);
+
+            foreach (Sprite sprite in resources)
+            {
+                switch (sprite.name)
+                {
+                    case "colourable":
+                        bundle.colourable = sprite;
+                        break;
+                    case "texture":
+                        bundle.texture = sprite;
+                        break;
+                    case "background":
+                        bundle.background = sprite;
+                        break;
+                }
+            }
+        }
+    }
 }
 
 /*
@@ -47,8 +123,17 @@ public class DressUpTextureBundle
 }
 
 [Serializable]
-public class StringDressTextureDictionary : SerializableDictionary<string, DressUpTextureBundle>
+public class HairTextureBundle 
 {
-
+    public Sprite? colourableFront;
+    public Sprite? colourableBack;
+    public Sprite? textureFront;
+    public Sprite? textureBack;
 }
+
+[Serializable]
+public class StringDressTextureDictionary : SerializableDictionary<string, DressUpTextureBundle> { }
+
+[Serializable]
+public class StringHairTextureDictionary : SerializableDictionary<string, HairTextureBundle> { }
 

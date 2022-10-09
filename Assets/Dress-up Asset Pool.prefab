@@ -49,57 +49,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   eyes:
-  - m_keys:
-    - eyes1
-    m_values:
-    - colourable: {fileID: 0}
-      texture: {fileID: 0}
-      background: {fileID: 21300000, guid: 0e5b881c05af51f4aa5a3de2ec3f1468, type: 3}
-  - m_keys:
-    - eyes2
+    m_keys:
+    - 
     m_values:
     - colourable: {fileID: 0}
       texture: {fileID: 0}
       background: {fileID: 0}
-  - m_keys:
-    - eyes3
-    m_values:
-    - colourable: {fileID: 0}
-      texture: {fileID: 0}
-      background: {fileID: 0}
-  - m_keys:
-    - eyes4
-    m_values:
-    - colourable: {fileID: 0}
-      texture: {fileID: 0}
-      background: {fileID: 0}
-  - m_keys:
-    - eyes5
-    m_values:
-    - colourable: {fileID: 0}
-      texture: {fileID: 0}
-      background: {fileID: 0}
-  - m_keys:
-    - eyes6
-    m_values:
-    - colourable: {fileID: 0}
-      texture: {fileID: 0}
-      background: {fileID: 0}
-  - m_keys:
-    - eyes7
-    m_values:
-    - colourable: {fileID: 0}
-      texture: {fileID: 0}
-      background: {fileID: 0}
-  - m_keys:
-    - eyes8
-    m_values:
-    - colourable: {fileID: 0}
-      texture: {fileID: 0}
-      background: {fileID: 0}
-  hair: []
-  lips:
-  - m_keys: []
+  hair:
+    m_keys: []
     m_values: []
-  - m_keys: []
+  lips:
+    m_keys: []
     m_values: []
