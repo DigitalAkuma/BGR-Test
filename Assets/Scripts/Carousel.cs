@@ -105,6 +105,7 @@ public class Carousel : MonoBehaviour
         }
     }
 
+    //Slot button clicked - should apply texture to model
     void SlotButtonClicked(Button myButton)
     {
         if (myButton.gameObject.transform.Find("selected"))
