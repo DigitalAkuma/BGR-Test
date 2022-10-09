@@ -13,14 +13,14 @@ using static UnityEngine.Rendering.VirtualTexturing.Debugging;
 [ExecuteInEditMode]
 public class AssetPool : MonoBehaviour
 {
-    [SerializeField]
-    StringDressTextureDictionary eyes;
-    [SerializeField]
-    StringHairTextureDictionary hair;
-    [SerializeField]
-    StringDressTextureDictionary lips;
 
-    //called when something in the scene has changed
+    public SpriteDressTextureDictionary eyes;
+
+    public SpriteHairTextureDictionary hair;
+
+    public SpriteDressTextureDictionary lips;
+
+    //called when something in the scene has changed (executes in editor not runtime)
     private void Update()
     {
         GrabHairAssets();
@@ -30,7 +30,7 @@ public class AssetPool : MonoBehaviour
 
     void GrabEyeAssets()
     {
-        eyes = new StringDressTextureDictionary();
+        eyes = new SpriteDressTextureDictionary();
         int i = 1;
         string path = "DressUpAssets/Eyes";
         Sprite[] resources;
@@ -40,10 +40,18 @@ public class AssetPool : MonoBehaviour
         {
             bundle = new DressUpTextureBundle();
             resources = Resources.LoadAll<Sprite>(path + "/" + "eyes" + i);
-            eyes.Add("eyes" + i, bundle);
+            Sprite thumbnailKey = null;
+            
 
             foreach (Sprite sprite in resources)
             {
+
+                if (sprite.name.Contains("Thumbnail"))
+                {
+                    thumbnailKey = sprite;
+                    continue;
+                }
+
                 switch (sprite.name)
                 {
                     case "colourable":
@@ -57,12 +65,14 @@ public class AssetPool : MonoBehaviour
                         break;
                 }
             }
+
+            eyes.Add(thumbnailKey, bundle);
         }
     }
 
     void GrabHairAssets()
     {
-        hair = new StringHairTextureDictionary();
+        hair = new SpriteHairTextureDictionary();
         int i = 1;
         string path = "DressUpAssets/Hair";
         Sprite[] resources;
@@ -72,11 +82,18 @@ public class AssetPool : MonoBehaviour
         {
             bundle = new HairTextureBundle();
             resources = Resources.LoadAll<Sprite>(path + "/" + "hair" + i);
-            hair.Add("hair" + i, bundle);
+            Sprite thumbnailKey = null;
+
 
             foreach (Sprite sprite in resources)
             {
-                switch(sprite.name)
+                if (sprite.name.Contains("Thumbnail"))
+                {
+                    thumbnailKey = sprite;
+                    continue;
+                }
+
+                switch (sprite.name)
                 {
                     case "colourable_front":
                         bundle.colourableFront = sprite;
@@ -92,12 +109,15 @@ public class AssetPool : MonoBehaviour
                     break;
                 }
             }
+
+            hair.Add(thumbnailKey, bundle);
         }
+
     }
 
     void GrabLipsAssets()
     {
-        lips = new StringDressTextureDictionary();
+        lips = new SpriteDressTextureDictionary();
         int i = 1;
         string path = "DressUpAssets/Lips";
         Sprite[] resources;
@@ -107,10 +127,17 @@ public class AssetPool : MonoBehaviour
         {
             bundle = new DressUpTextureBundle();
             resources = Resources.LoadAll<Sprite>(path + "/" + "lips" + i);
-            lips.Add("lips" + i, bundle);
+            Sprite thumbnailKey = null;
+            
 
             foreach (Sprite sprite in resources)
             {
+                if (sprite.name.Contains("Thumbnail"))
+                {
+                    thumbnailKey = sprite;
+                    continue;
+                }
+
                 switch (sprite.name)
                 {
                     case "colourable":
@@ -124,6 +151,8 @@ public class AssetPool : MonoBehaviour
                         break;
                 }
             }
+
+            lips.Add(thumbnailKey, bundle);
         }
     }
 }
@@ -163,9 +192,11 @@ public class HairTextureBundle
     public Sprite? textureBack;
 }
 
+//Key: Thumbnail sprite
+//Value: Texture bundle
 [Serializable]
-public class StringDressTextureDictionary : SerializableDictionary<string, DressUpTextureBundle> { }
+public class SpriteDressTextureDictionary : SerializableDictionary<Sprite, DressUpTextureBundle> { }
 
 [Serializable]
-public class StringHairTextureDictionary : SerializableDictionary<string, HairTextureBundle> { }
+public class SpriteHairTextureDictionary : SerializableDictionary<Sprite, HairTextureBundle> { }
 

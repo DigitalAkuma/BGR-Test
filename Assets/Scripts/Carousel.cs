@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 public class Carousel : MonoBehaviour
 {
-    public string name;
+    public string name; //"hair_carousel" but only hair is grabbed
     public GameObject wheel; //gameobject containing all ui things
     public int slotCount; //how many display slots there are
     public int resourceCount; //how many items there are
@@ -15,9 +15,15 @@ public class Carousel : MonoBehaviour
     public List<Button> slotButtons;
 
     //All sprite assets referenced by string
-    public List<Dictionary<string, Sprite>> Assets; //list of dictionaries containign assets ORDERED
+    public List<Dictionary<string, Sprite>> assetsDictionaryList; //list of dictionaries containign assets ORDERED
     public GameObject selected; //the gameobject of the selection image
-    public int selectedAsset; //which asset is selected;
+    public int assetsIndex; //which asset dictionary is selected;
+
+    //Reference to the AssetPool
+    AssetPool assetPool;
+
+    //Reference to the DressupModel
+    DressupModel dressupModel;
 
     //Carousels - hair, lips, eyes
     public void Start()
@@ -27,9 +33,13 @@ public class Carousel : MonoBehaviour
         this.name = splits[0];
         this.currentPos = 1;
         this.selected = wheel.transform.Find("selected").gameObject; //thumbnail dashes
-        this.selectedAsset = 0;
+        this.assetsIndex = 0;
 
-        Assets = new List<Dictionary<string, Sprite>>();
+        assetsDictionaryList = new List<Dictionary<string, Sprite>>();
+
+        //GameObject.Find() is fine as long as it's not used every frame or a lot
+        assetPool = GameObject.Find("AssetPool").GetComponent<AssetPool>();
+        dressupModel = GameObject.Find("dressup").GetComponent<DressupModel>();
 
         //loop through each folder in relevant asset folder, add to dictionary 
         //keeps going until no more assets can be found
@@ -55,7 +65,8 @@ public class Carousel : MonoBehaviour
                         currentDict.Add(texture.name, texture);
                     }
                 }
-                Assets.Add(currentDict);
+                //dictionary contains all textures - referenced by their name
+                assetsDictionaryList.Add(currentDict); 
                 i++;
             }
             else
@@ -83,6 +94,8 @@ public class Carousel : MonoBehaviour
                 }
                 DisableBackButton();
                 //adding listeners to thumbnail slots
+                //clicking on a slot button calls SlotButtonClicked
+                //a slot button is any child with "slot" in its name
                 if (child.name.Contains("slot"))
                 {
                     Button childButton = child.gameObject.GetComponent<Button>();
@@ -114,7 +127,7 @@ public class Carousel : MonoBehaviour
         {
             selected.transform.SetParent(myButton.gameObject.transform.parent);
             selected.GetComponent<Image>().enabled = false;
-            selectedAsset = 0;
+            assetsIndex = 0;
         }
         else {
             selected.transform.SetParent(myButton.gameObject.transform);
@@ -122,8 +135,33 @@ public class Carousel : MonoBehaviour
             selected.GetComponent<Image>().enabled = true;
             string buttonName = myButton.gameObject.name;
             int slotNumber = (int)Char.GetNumericValue(buttonName[buttonName.Length - 1]);
-            selectedAsset = currentPos - 1 + slotNumber;
-        }     
+            assetsIndex = currentPos - 1 + slotNumber;
+        }
+
+        /*
+         * The selected thumbnail asset is in the same folder as the sibling assets
+         * It is also the key for that folder
+         */
+
+        Sprite thumbnail = myButton.gameObject.GetComponent<Image>().sprite;
+
+        //The name string: ex "hair", helps find directory path
+        //Name is based off game object carousel name
+        //It also helps determine which assets we're dealing with
+        switch (name)
+        {
+            case "hair":
+                HairTextureBundle hairBundle = assetPool.hair[thumbnail];
+                dressupModel.ChangeHair(hairBundle.textureFront, hairBundle.textureBack, hairBundle.colourableFront, hairBundle.colourableBack);
+                break;
+            case "eyes":
+                DressUpTextureBundle eyesBundle = assetPool.eyes[thumbnail];
+                dressupModel.ChangeEyes(eyesBundle.background, eyesBundle.colourable);
+                break;
+            case "lips":
+                break;
+
+        }
     }
 
     void AdvanceCarousel()
@@ -143,13 +181,13 @@ public class Carousel : MonoBehaviour
         int count = -1;
         foreach (Button bt in slotButtons)
         {
-            bt.gameObject.GetComponent<Image>().sprite = Assets[currentPos + count]["thumbnail"];
+            bt.gameObject.GetComponent<Image>().sprite = assetsDictionaryList[currentPos + count]["thumbnail"];
             if (bt.gameObject.transform.Find("selected"))
             {
                 selected.transform.SetParent(bt.gameObject.transform.parent);
                 selected.GetComponent<Image>().enabled = false;
             }
-            if (currentPos + count + 1 == selectedAsset)
+            if (currentPos + count + 1 == assetsIndex)
             {
                 selected.transform.SetParent(bt.gameObject.transform);
                 selected.transform.localPosition = new Vector3(-1, -1, 0);
@@ -170,13 +208,13 @@ public class Carousel : MonoBehaviour
         int count = -1;
         foreach (Button bt in slotButtons)
         {
-            bt.gameObject.GetComponent<Image>().sprite = Assets[currentPos + count]["thumbnail"];
+            bt.gameObject.GetComponent<Image>().sprite = assetsDictionaryList[currentPos + count]["thumbnail"];
             if (bt.gameObject.transform.Find("selected"))
             {
                 selected.transform.SetParent(bt.gameObject.transform.parent);
                 selected.GetComponent<Image>().enabled = false;
             }
-            if (currentPos + count + 1 == selectedAsset)
+            if (currentPos + count + 1 == assetsIndex)
             {
                 selected.transform.SetParent(bt.gameObject.transform);
                 selected.transform.localPosition = new Vector3(-1, -1, 0);

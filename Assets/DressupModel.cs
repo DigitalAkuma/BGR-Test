@@ -1,6 +1,8 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 /*
  * Contains references to all the parts of the model that can be changed/dressed up
@@ -8,28 +10,37 @@ using UnityEngine;
  */
 public class DressupModel : MonoBehaviour
 {
-    public List<GameObject> changeables;
+    public StringGameObjectDictionary eyesReferences;
 
-    private void Start()
+    public StringGameObjectDictionary hairReferences;
+
+    public StringGameObjectDictionary lipsReferences;
+
+    public void ChangeEyes(Sprite background, Sprite colourable)
     {
+        //Set the key, which will reference the game object with the sprite to change
+        ICollection<string> keys = eyesReferences.Keys;
+
+        foreach (string key in keys)
+        {
+            switch(key)
+            {
+                case "background":
+                    eyesReferences[key].GetComponent<Image>().sprite = background;
+                    break;
+                case "colourable":
+                    eyesReferences[key].GetComponent<Image>().sprite = colourable;
+                    break;
+            }
+        }
     }
 
-    public void ChangeEyes(Sprite background, Sprite colourable, Sprite defaultSprite)
+    public void ChangeLips(Sprite texture, Sprite colourable)
     {
 
     }
 
-    public void ChangeEyeColor(Sprite colourable)
-    {
-
-    }
-
-    public void ChangeLips(Sprite texture, Sprite colourable, Sprite defaultSprite)
-    {
-
-    }
-
-    public void ChangeHairFront(Sprite texture, Sprite colourable, Sprite defaultSprite)
+    public void ChangeHair(Sprite textureFront, Sprite textureBack, Sprite colourableFront, Sprite colourableBack)
     {
 
     }
@@ -51,3 +62,6 @@ public class DressupModel : MonoBehaviour
  * 
  * wheel game object contains all UI for carousels
  */
+
+[Serializable]
+public class StringGameObjectDictionary : SerializableDictionary<string, GameObject> { }
