@@ -14130,9 +14130,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6ce8f7312e3854744b6121398d5fa9f2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  eyes: {fileID: 754642714}
-  lips: {fileID: 11652852}
-  hairFront: {fileID: 1884092120}
+  changeables:
+  - {fileID: 0}
 --- !u!1 &1853707360
 GameObject:
   m_ObjectHideFlags: 0

@@ -8,10 +8,7 @@ using UnityEngine;
  */
 public class DressupModel : MonoBehaviour
 {
-    //Focusing on hair, lips, and eyes for now
-    public GameObject eyes;
-    public GameObject lips;
-    public GameObject hairFront;
+    public List<GameObject> changeables;
 
     private void Start()
     {
