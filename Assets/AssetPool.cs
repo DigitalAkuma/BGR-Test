@@ -14,10 +14,9 @@ using static UnityEngine.Rendering.VirtualTexturing.Debugging;
 public class AssetPool : MonoBehaviour
 {
     [SerializeField]
-    StringDressTextureDictionary eyes = new StringDressTextureDictionary();
+    StringDressTextureDictionary eyes;
     [SerializeField]
     StringHairTextureDictionary hair;
-
     [SerializeField]
     StringDressTextureDictionary lips;
 
@@ -26,6 +25,39 @@ public class AssetPool : MonoBehaviour
     {
         GrabHairAssets();
         GrabLipsAssets();
+        GrabEyeAssets();
+    }
+
+    void GrabEyeAssets()
+    {
+        eyes = new StringDressTextureDictionary();
+        int i = 1;
+        string path = "DressUpAssets/Eyes";
+        Sprite[] resources;
+        DressUpTextureBundle bundle;
+
+        for (i = 1; i <= 8; i++)
+        {
+            bundle = new DressUpTextureBundle();
+            resources = Resources.LoadAll<Sprite>(path + "/" + "eyes" + i);
+            eyes.Add("eyes" + i, bundle);
+
+            foreach (Sprite sprite in resources)
+            {
+                switch (sprite.name)
+                {
+                    case "colourable":
+                        bundle.colourable = sprite;
+                        break;
+                    case "default":
+                        bundle.texture = sprite;
+                        break;
+                    case "background":
+                        bundle.background = sprite;
+                        break;
+                }
+            }
+        }
     }
 
     void GrabHairAssets()
