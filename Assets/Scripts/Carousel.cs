@@ -38,7 +38,7 @@ public class Carousel : MonoBehaviour
         assetsDictionaryList = new List<Dictionary<string, Sprite>>();
 
         //GameObject.Find() is fine as long as it's not used every frame or a lot
-        assetPool = GameObject.Find("AssetPool").GetComponent<AssetPool>();
+        assetPool = GameObject.Find("Dress-up Asset Pool").GetComponent<AssetPool>();
         dressupModel = GameObject.Find("dressup").GetComponent<DressupModel>();
 
         //loop through each folder in relevant asset folder, add to dictionary 
@@ -151,7 +151,8 @@ public class Carousel : MonoBehaviour
         switch (name)
         {
             case "hair":
-                HairTextureBundle hairBundle = assetPool.hair[thumbnail];
+                //Corresponding bundle is grabbed using given thumbnail
+                HairTextureBundle hairBundle = assetPool.hair[thumbnail]; 
                 dressupModel.ChangeHair(hairBundle.textureFront, hairBundle.textureBack, hairBundle.colourableFront, hairBundle.colourableBack);
                 break;
             case "eyes":

@@ -13711,7 +13711,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1784805098}
-  - component: {fileID: 1784805097}
   - component: {fileID: 1784805096}
   m_Layer: 5
   m_Name: Dress-up Asset Pool
@@ -13734,14 +13733,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   eyes:
     m_keys:
-    - eyes1
-    - eyes2
-    - eyes3
-    - eyes4
-    - eyes5
-    - eyes6
-    - eyes7
-    - eyes8
+    - {fileID: 21300000, guid: 8c2d95303e5ce7e498d69867ee239956, type: 3}
+    - {fileID: 21300000, guid: 1eacacd4ee1fe0e47873c1dbaec28e0a, type: 3}
+    - {fileID: 21300000, guid: 80a517e6f9ef558449f50a6e298534c5, type: 3}
+    - {fileID: 21300000, guid: c9e159e67be2afc43bd0b2807d87a2c7, type: 3}
+    - {fileID: 21300000, guid: b275548c2a1065b4799edfcf3b281aaa, type: 3}
+    - {fileID: 21300000, guid: f741ed75fef77ce4e97ce283d032a5cb, type: 3}
+    - {fileID: 21300000, guid: c7a84e1a3f8f4c24695adc96dc0cd40b, type: 3}
+    - {fileID: 21300000, guid: d14b78aabb7371347b11aaf0c6521bd0, type: 3}
     m_values:
     - colourable: {fileID: 21300000, guid: 56b7e1fe611788c4184f4629d05c3fc3, type: 3}
       texture: {fileID: 21300000, guid: 0f797177c0d1f4a459acf8e47ba56911, type: 3}
@@ -13769,21 +13768,21 @@ MonoBehaviour:
       background: {fileID: 0}
   hair:
     m_keys:
-    - hair1
-    - hair2
-    - hair3
-    - hair4
-    - hair5
-    - hair6
-    - hair7
-    - hair8
-    - hair9
-    - hair10
-    - hair11
-    - hair12
-    - hair13
-    - hair14
-    - hair15
+    - {fileID: 21300000, guid: 7ec1977d217eeb749ad1406fec4676f5, type: 3}
+    - {fileID: 21300000, guid: 75148a9ee57bea747b2c98adc50d7951, type: 3}
+    - {fileID: 21300000, guid: 55cd976655e10d445b4daa5850ecc48f, type: 3}
+    - {fileID: 21300000, guid: c1129f4abc46ee1429b31d446d79c2b6, type: 3}
+    - {fileID: 21300000, guid: 6969efcf84590fe48a0506489160bf1b, type: 3}
+    - {fileID: 21300000, guid: ae1ea5e9e5f7ef747992a3bff8c1b975, type: 3}
+    - {fileID: 21300000, guid: b00c394bb80fe184f8336b755e8a8e85, type: 3}
+    - {fileID: 21300000, guid: 57aef6db55c257a48b6a4b97e7a4a72e, type: 3}
+    - {fileID: 21300000, guid: c32ce3a2e6e4d124ea2d98d7fdeed6cf, type: 3}
+    - {fileID: 21300000, guid: af3d7f703b7a7c0428ca3c46f73ca65c, type: 3}
+    - {fileID: 21300000, guid: 6eea18662a515c34f80b53a2b8bc3dda, type: 3}
+    - {fileID: 21300000, guid: baba2e6e76c7193449a78cc7481cf875, type: 3}
+    - {fileID: 21300000, guid: b05d1b7841c8a4647aa805238d5d8ba2, type: 3}
+    - {fileID: 21300000, guid: 27bd1dbd0c1e5e5488ef4d974f30e651, type: 3}
+    - {fileID: 21300000, guid: 2eb000b0e743e33409182eedff5af270, type: 3}
     m_values:
     - colourableFront: {fileID: 21300000, guid: 69791053b9577fe4aba3b38ae5122abb, type: 3}
       colourableBack: {fileID: 21300000, guid: 1d7486489b2acb44eaee6daf4c719a71, type: 3}
@@ -13847,11 +13846,11 @@ MonoBehaviour:
       textureBack: {fileID: 21300000, guid: 04fd4a1bce38ca44198f268c1f886a25, type: 3}
   lips:
     m_keys:
-    - lips1
-    - lips2
-    - lips3
-    - lips4
-    - lips5
+    - {fileID: 21300000, guid: 7b5d85685c6846f42871edeeeadda778, type: 3}
+    - {fileID: 21300000, guid: a34afaa151f7e87468e4373a31018a38, type: 3}
+    - {fileID: 21300000, guid: 5522aca7ec71e7140892b731ae657014, type: 3}
+    - {fileID: 21300000, guid: 28061aa1191c2c54abea8a073d965437, type: 3}
+    - {fileID: 21300000, guid: ec4aff75e6d33eb4ea4a9a29afc0929d, type: 3}
     m_values:
     - colourable: {fileID: 21300000, guid: a093e7fd2d249694483f8170067ac393, type: 3}
       texture: {fileID: 21300000, guid: eecc841136e343d4f96e9acd8f2497d4, type: 3}
@@ -13868,27 +13867,6 @@ MonoBehaviour:
     - colourable: {fileID: 21300000, guid: 07dce2db9abdbf748ad796e6df7d0cb7, type: 3}
       texture: {fileID: 0}
       background: {fileID: 0}
---- !u!114 &1784805097
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1784805095}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6ce8f7312e3854744b6121398d5fa9f2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  eyesReferences:
-    m_keys: []
-    m_values: []
-  hairReferences:
-    m_keys: []
-    m_values: []
-  lipsReferences:
-    m_keys: []
-    m_values: []
 --- !u!224 &1784805098
 RectTransform:
   m_ObjectHideFlags: 0
