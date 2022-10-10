@@ -1,0 +1,186 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &5031103868439738522
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5031103868439738519}
+  - component: {fileID: 5411839954196897477}
+  m_Layer: 5
+  m_Name: Dress-up Asset Pool
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &5031103868439738519
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5031103868439738522}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 90}
+  m_LocalScale: {x: 0.013033561, y: 0.013033561, z: 0.013033561}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 20101.771, y: -621.7119}
+  m_SizeDelta: {x: 263.02, y: 455.09}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &5411839954196897477
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5031103868439738522}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5d05fc2579624004c9c4e80c7f6860ee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  eyes:
+    m_keys:
+    - {fileID: 21300000, guid: 8c2d95303e5ce7e498d69867ee239956, type: 3}
+    - {fileID: 21300000, guid: 1eacacd4ee1fe0e47873c1dbaec28e0a, type: 3}
+    - {fileID: 21300000, guid: 80a517e6f9ef558449f50a6e298534c5, type: 3}
+    - {fileID: 21300000, guid: c9e159e67be2afc43bd0b2807d87a2c7, type: 3}
+    - {fileID: 21300000, guid: b275548c2a1065b4799edfcf3b281aaa, type: 3}
+    - {fileID: 21300000, guid: f741ed75fef77ce4e97ce283d032a5cb, type: 3}
+    - {fileID: 21300000, guid: c7a84e1a3f8f4c24695adc96dc0cd40b, type: 3}
+    - {fileID: 21300000, guid: d14b78aabb7371347b11aaf0c6521bd0, type: 3}
+    m_values:
+    - colourable: {fileID: 21300000, guid: 56b7e1fe611788c4184f4629d05c3fc3, type: 3}
+      texture: {fileID: 21300000, guid: 0f797177c0d1f4a459acf8e47ba56911, type: 3}
+      background: {fileID: 21300000, guid: 0e5b881c05af51f4aa5a3de2ec3f1468, type: 3}
+    - colourable: {fileID: 21300000, guid: f5a32de68716fa9429f5756740931724, type: 3}
+      texture: {fileID: 21300000, guid: ebc876357a91b5a49bae00803fbbe4be, type: 3}
+      background: {fileID: 21300000, guid: a7d2c62e7eb21094794ae477316b3735, type: 3}
+    - colourable: {fileID: 21300000, guid: 2c33f84ebec57ce4aae10cdd503a73e2, type: 3}
+      texture: {fileID: 21300000, guid: 9cb00711517e19a4ab952e77b7a4ba61, type: 3}
+      background: {fileID: 21300000, guid: cceed55fd3431cf4589860ec10d8942a, type: 3}
+    - colourable: {fileID: 21300000, guid: eedb79198044eab4fb79d8ae3b8c7ff9, type: 3}
+      texture: {fileID: 21300000, guid: 372f5990248f44f46bc5ec144503a1d7, type: 3}
+      background: {fileID: 21300000, guid: ac0c368b1538adc40a425c7a6e755686, type: 3}
+    - colourable: {fileID: 0}
+      texture: {fileID: 21300000, guid: 70aa54ef8c9a07d43862d1c43cf16cc4, type: 3}
+      background: {fileID: 0}
+    - colourable: {fileID: 0}
+      texture: {fileID: 21300000, guid: 6e261d37ccabb6748bb8d1abcfe6b7b1, type: 3}
+      background: {fileID: 0}
+    - colourable: {fileID: 0}
+      texture: {fileID: 21300000, guid: 1ff17f3042da4764297b543fd8cafa58, type: 3}
+      background: {fileID: 0}
+    - colourable: {fileID: 0}
+      texture: {fileID: 21300000, guid: d9dbeb84425de1e479ff50d83dad6ef9, type: 3}
+      background: {fileID: 0}
+  hair:
+    m_keys:
+    - {fileID: 21300000, guid: 7ec1977d217eeb749ad1406fec4676f5, type: 3}
+    - {fileID: 21300000, guid: 75148a9ee57bea747b2c98adc50d7951, type: 3}
+    - {fileID: 21300000, guid: 55cd976655e10d445b4daa5850ecc48f, type: 3}
+    - {fileID: 21300000, guid: c1129f4abc46ee1429b31d446d79c2b6, type: 3}
+    - {fileID: 21300000, guid: 6969efcf84590fe48a0506489160bf1b, type: 3}
+    - {fileID: 21300000, guid: ae1ea5e9e5f7ef747992a3bff8c1b975, type: 3}
+    - {fileID: 21300000, guid: b00c394bb80fe184f8336b755e8a8e85, type: 3}
+    - {fileID: 21300000, guid: 57aef6db55c257a48b6a4b97e7a4a72e, type: 3}
+    - {fileID: 21300000, guid: c32ce3a2e6e4d124ea2d98d7fdeed6cf, type: 3}
+    - {fileID: 21300000, guid: af3d7f703b7a7c0428ca3c46f73ca65c, type: 3}
+    - {fileID: 21300000, guid: 6eea18662a515c34f80b53a2b8bc3dda, type: 3}
+    - {fileID: 21300000, guid: baba2e6e76c7193449a78cc7481cf875, type: 3}
+    - {fileID: 21300000, guid: b05d1b7841c8a4647aa805238d5d8ba2, type: 3}
+    - {fileID: 21300000, guid: 27bd1dbd0c1e5e5488ef4d974f30e651, type: 3}
+    - {fileID: 21300000, guid: 2eb000b0e743e33409182eedff5af270, type: 3}
+    m_values:
+    - colourableFront: {fileID: 21300000, guid: 69791053b9577fe4aba3b38ae5122abb, type: 3}
+      colourableBack: {fileID: 21300000, guid: 1d7486489b2acb44eaee6daf4c719a71, type: 3}
+      textureFront: {fileID: 21300000, guid: 73220f448333ab04e92848a40e08a865, type: 3}
+      textureBack: {fileID: 0}
+    - colourableFront: {fileID: 21300000, guid: 6ed98192647a2134b9c03c390d77e1d6, type: 3}
+      colourableBack: {fileID: 21300000, guid: ba6ad4c4162555b4793f2ad89a191052, type: 3}
+      textureFront: {fileID: 21300000, guid: 240bc9f1d618037448863861a18acbb3, type: 3}
+      textureBack: {fileID: 0}
+    - colourableFront: {fileID: 21300000, guid: c2cb1348ef6366a40bdf74e08f678587, type: 3}
+      colourableBack: {fileID: 21300000, guid: 48efb9bc2ef0d8e4d84767764fba2765, type: 3}
+      textureFront: {fileID: 0}
+      textureBack: {fileID: 0}
+    - colourableFront: {fileID: 21300000, guid: 7b0ea76deb71b5948b115b8ed00e2c36, type: 3}
+      colourableBack: {fileID: 21300000, guid: 1d4139f9d0e794d4e85f56d9c0c33614, type: 3}
+      textureFront: {fileID: 21300000, guid: 9372293b7e5db954f8945d364e3375c1, type: 3}
+      textureBack: {fileID: 0}
+    - colourableFront: {fileID: 21300000, guid: d4249f6bec0f9c243b7229b50a51fce8, type: 3}
+      colourableBack: {fileID: 21300000, guid: 1661df25384637d43bb0415ca8bbce4c, type: 3}
+      textureFront: {fileID: 21300000, guid: 64668db2d8202d7449b1c3026f6872cc, type: 3}
+      textureBack: {fileID: 0}
+    - colourableFront: {fileID: 21300000, guid: 94631af6ff144ae458cf83219139b0be, type: 3}
+      colourableBack: {fileID: 21300000, guid: 4cf92d1973e18db4e928a0c08953b30c, type: 3}
+      textureFront: {fileID: 21300000, guid: c6f96567feb1a3848805708285450959, type: 3}
+      textureBack: {fileID: 0}
+    - colourableFront: {fileID: 21300000, guid: 0cee998453f367940b61a18e127049dc, type: 3}
+      colourableBack: {fileID: 21300000, guid: 172ded6bf0481944e8846931e9c3f58f, type: 3}
+      textureFront: {fileID: 21300000, guid: 09f46cdb43ddd36458050372dd2dbc1c, type: 3}
+      textureBack: {fileID: 0}
+    - colourableFront: {fileID: 21300000, guid: 305405c22154e654680e5c32277f698f, type: 3}
+      colourableBack: {fileID: 21300000, guid: 6865e3f3d8218564481d5b5cb1a0f1f4, type: 3}
+      textureFront: {fileID: 21300000, guid: 1e5358a62ccfdff4ba360a937737027d, type: 3}
+      textureBack: {fileID: 21300000, guid: b12ed1ebc7d075d469521fcbf06aebda, type: 3}
+    - colourableFront: {fileID: 21300000, guid: 673810bfaab7e034dbd23c024ac24d3f, type: 3}
+      colourableBack: {fileID: 21300000, guid: c3867ad3eec35da429404f8c749f1b6e, type: 3}
+      textureFront: {fileID: 21300000, guid: c2c23055c623a3d4e927420e73ea8e98, type: 3}
+      textureBack: {fileID: 0}
+    - colourableFront: {fileID: 21300000, guid: 19c50e0569c41ab42b0b1ce73a991d33, type: 3}
+      colourableBack: {fileID: 21300000, guid: a85a99dbe7298274082f1c098d0144e1, type: 3}
+      textureFront: {fileID: 21300000, guid: d32b1bce14187ec4dac38bc7b01a60f9, type: 3}
+      textureBack: {fileID: 0}
+    - colourableFront: {fileID: 21300000, guid: f97fcf94d3e5a67428740c4f6503b611, type: 3}
+      colourableBack: {fileID: 21300000, guid: 47f8f4dc7562a864d85e37e7bc593e79, type: 3}
+      textureFront: {fileID: 21300000, guid: 35bd5472fd05e3945864ac5003a44735, type: 3}
+      textureBack: {fileID: 0}
+    - colourableFront: {fileID: 21300000, guid: 2ff0f65487effca4fb1587fb49d67eba, type: 3}
+      colourableBack: {fileID: 21300000, guid: 0f9f0590ea13c2941af350d1a7b34764, type: 3}
+      textureFront: {fileID: 21300000, guid: 82fe5cdb0cd483e4dbe5c7dc57b49e1d, type: 3}
+      textureBack: {fileID: 0}
+    - colourableFront: {fileID: 21300000, guid: 034398f4a6e4dde47a092d3736365d58, type: 3}
+      colourableBack: {fileID: 21300000, guid: 57312deba16523b499a112b61a3e4a9a, type: 3}
+      textureFront: {fileID: 21300000, guid: ba02b96f2e17f9c4db0ef2e66aab9879, type: 3}
+      textureBack: {fileID: 21300000, guid: 2ce7543b87bc81146bba028eb254f4dc, type: 3}
+    - colourableFront: {fileID: 21300000, guid: 46df2ab979261a74fb044a677fcc1de0, type: 3}
+      colourableBack: {fileID: 21300000, guid: eebb1337cf8fe3845977d1b7e95edfa8, type: 3}
+      textureFront: {fileID: 21300000, guid: 560122f7a0ac81b4db2e7c0269434039, type: 3}
+      textureBack: {fileID: 0}
+    - colourableFront: {fileID: 21300000, guid: ba2b266c74350794e8f5373fe502fc44, type: 3}
+      colourableBack: {fileID: 21300000, guid: a34da2f1a7b000849b3719a22829d57d, type: 3}
+      textureFront: {fileID: 21300000, guid: 01413a8d9c58f1d44ba0ad0fa9451717, type: 3}
+      textureBack: {fileID: 21300000, guid: 04fd4a1bce38ca44198f268c1f886a25, type: 3}
+  lips:
+    m_keys:
+    - {fileID: 21300000, guid: 7b5d85685c6846f42871edeeeadda778, type: 3}
+    - {fileID: 21300000, guid: a34afaa151f7e87468e4373a31018a38, type: 3}
+    - {fileID: 21300000, guid: 5522aca7ec71e7140892b731ae657014, type: 3}
+    - {fileID: 21300000, guid: 28061aa1191c2c54abea8a073d965437, type: 3}
+    - {fileID: 21300000, guid: ec4aff75e6d33eb4ea4a9a29afc0929d, type: 3}
+    m_values:
+    - colourable: {fileID: 21300000, guid: a093e7fd2d249694483f8170067ac393, type: 3}
+      texture: {fileID: 21300000, guid: eecc841136e343d4f96e9acd8f2497d4, type: 3}
+      background: {fileID: 0}
+    - colourable: {fileID: 21300000, guid: 04988aa7cbb28a040be0aa28b59cca7a, type: 3}
+      texture: {fileID: 0}
+      background: {fileID: 0}
+    - colourable: {fileID: 21300000, guid: cd1331685ec07264abfa699ca86956e4, type: 3}
+      texture: {fileID: 21300000, guid: 3213b6122e2c97545996788e80d0f1a7, type: 3}
+      background: {fileID: 0}
+    - colourable: {fileID: 21300000, guid: e134a4aa53098af49acd58e0aaa9ab89, type: 3}
+      texture: {fileID: 0}
+      background: {fileID: 0}
+    - colourable: {fileID: 21300000, guid: 07dce2db9abdbf748ad796e6df7d0cb7, type: 3}
+      texture: {fileID: 0}
+      background: {fileID: 0}

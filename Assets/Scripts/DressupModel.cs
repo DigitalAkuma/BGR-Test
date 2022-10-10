@@ -10,6 +10,11 @@ using UnityEngine.UI;
  */
 public class DressupModel : MonoBehaviour
 {
+    /*
+     * Key = game object name
+     * Ex: background, colourable
+     * 
+     */
     public StringGameObjectDictionary eyesReferences;
 
     public StringGameObjectDictionary hairReferences;
@@ -74,7 +79,7 @@ public class DressupModel : MonoBehaviour
 
         foreach (string key in keys)
         {
-            switch (key)
+            switch (key) //Key = game object name
             {
                 case "texture_front":
                     if (textureFront != null) hairReferences[key].GetComponent<Image>().sprite = textureFront;
