@@ -3617,4 +3617,53 @@ MonoBehaviour:
     m_values:
     - {fileID: 8262536721341547837}
     - {fileID: 8262536722408442567}
+  topsReferences:
+    m_keys:
+    - colourable
+    - texture
+    m_values:
+    - {fileID: 8262536722828076061}
+    - {fileID: 8262536721197378834}
+  sleevesReferences:
+    m_keys:
+    - colourable
+    - texture
+    m_values:
+    - {fileID: 8262536722282067168}
+    - {fileID: 8262536722686241440}
+  jewelryReferences:
+    m_keys:
+    - colourable
+    - texture
+    m_values:
+    - {fileID: 8262536722510530317}
+    - {fileID: 8262536721796830351}
+  shoesReferences:
+    m_keys:
+    - colourable
+    - texture
+    m_values:
+    - {fileID: 8262536722571428225}
+    - {fileID: 8262536723112635305}
+  bottomsReferences:
+    m_keys:
+    - colourable
+    - texture
+    m_values:
+    - {fileID: 8262536722663323747}
+    - {fileID: 8262536722428733377}
+  pursesReferences:
+    m_keys:
+    - colourable
+    - texture
+    m_values:
+    - {fileID: 8262536722879751277}
+    - {fileID: 8262536723008116772}
+  moreReferences:
+    m_keys:
+    - colourable
+    - texture
+    m_values:
+    - {fileID: 8262536722231811324}
+    - {fileID: 8262536721981958488}
   blank: {fileID: 21300000, guid: d4d25eb056cfe764eb8c05a2c82a7d03, type: 3}
