@@ -16,10 +16,15 @@ public class DressupModel : MonoBehaviour
      * 
      */
     public StringGameObjectDictionary eyesReferences;
-
     public StringGameObjectDictionary hairReferences;
-
     public StringGameObjectDictionary lipsReferences;
+    public StringGameObjectDictionary topsReferences;
+    public StringGameObjectDictionary sleevesReferences;
+    public StringGameObjectDictionary jewelryReferences;
+    public StringGameObjectDictionary shoesReferences;
+    public StringGameObjectDictionary bottomsReferences;
+    public StringGameObjectDictionary pursesReferences;
+    public StringGameObjectDictionary moreReferences;
 
     [SerializeField]
     Sprite blank;
