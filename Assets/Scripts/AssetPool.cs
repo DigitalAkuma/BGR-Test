@@ -13,20 +13,43 @@ using static UnityEngine.Rendering.VirtualTexturing.Debugging;
 [ExecuteInEditMode]
 public class AssetPool : MonoBehaviour
 {
+    // Step 1
 
     public SpriteDressTextureDictionary eyes;
-
     public SpriteHairTextureDictionary hair;
-
     public SpriteDressTextureDictionary lips;
+
+    // Step 2 
+
+    public SpriteDressTextureDictionary tops;
+    public SpriteDressTextureDictionary sleeves;
+    public SpriteDressTextureDictionary bottoms;
+
+    // Step 3
+
+    public SpriteDressTextureDictionary shoes;
+    public SpriteDressTextureDictionary purses;
+    public SpriteDressTextureDictionary jewelry;
+    public SpriteDressTextureDictionary more;
 
     //called when something in the scene has changed (executes in editor not runtime)
     private void Update()
     {
         GrabHairAssets();
-        GrabLipsAssets();
         GrabEyeAssets();
+        GrabAssets("Lips");
+        
+        GrabAssets("Tops");
+        GrabAssets("Sleeves");
+        GrabAssets("Bottoms");
+
+        GrabAssets("Shoes");
+        GrabAssets("Purses");
+        GrabAssets("Jewelry");
+        GrabAssets("More");
     }
+
+    
 
     void GrabEyeAssets()
     {
@@ -115,20 +138,23 @@ public class AssetPool : MonoBehaviour
 
     }
 
-    void GrabLipsAssets()
+
+    void GrabAssets(string folderName)
     {
-        lips = new SpriteDressTextureDictionary();
-        int i = 1;
-        string path = "DressUpAssets/Lips";
+        SpriteDressTextureDictionary newDictionary = new SpriteDressTextureDictionary();
+
+        string path = "DressUpAssets/" + folderName;
+        string iopath = "Assets\\Resources\\" + path.Replace('/', '\\');
         Sprite[] resources;
         DressUpTextureBundle bundle;
 
-        for (i = 1; i <= 5; i++)
+        int folders = System.IO.Directory.GetDirectories(iopath).Length;
+
+        for (int i = 1; i <= folders; i++)
         {
             bundle = new DressUpTextureBundle();
-            resources = Resources.LoadAll<Sprite>(path + "/" + "lips" + i);
+            resources = Resources.LoadAll<Sprite>(path + "/" + folderName.ToLower() + i);
             Sprite thumbnailKey = null;
-            
 
             foreach (Sprite sprite in resources)
             {
@@ -152,7 +178,20 @@ public class AssetPool : MonoBehaviour
                 }
             }
 
-            lips.Add(thumbnailKey, bundle);
+            newDictionary.Add(thumbnailKey, bundle);
+        }
+
+        switch(folderName)
+        {
+            case "Tops": tops = newDictionary; break;
+            case "Eyes": eyes = newDictionary; break;
+            case "Lips": lips = newDictionary; break;
+            case "Sleeves": sleeves = newDictionary; break;
+            case "Bottoms": bottoms = newDictionary; break;
+            case "Shoes": shoes = newDictionary; break;
+            case "Purses": purses = newDictionary; break;
+            case "Jewelry": jewelry = newDictionary; break;
+            case "More": more = newDictionary; break;
         }
     }
 }
