@@ -4077,7 +4077,7 @@ RectTransform:
   - {fileID: 1780318077}
   - {fileID: 1577069832}
   m_Father: {fileID: 875984358}
-  m_RootOrder: 1
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -4430,7 +4430,7 @@ RectTransform:
   - {fileID: 16214195}
   - {fileID: 772528616}
   m_Father: {fileID: 875984358}
-  m_RootOrder: 5
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -4675,7 +4675,7 @@ RectTransform:
   - {fileID: 1238388238}
   - {fileID: 945126125}
   m_Father: {fileID: 875984358}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -5918,6 +5918,7 @@ GameObject:
   m_Component:
   - component: {fileID: 643987517}
   - component: {fileID: 643987518}
+  - component: {fileID: 643987519}
   m_Layer: 5
   m_Name: bottoms_carousel
   m_TagString: Untagged
@@ -5947,7 +5948,7 @@ RectTransform:
   - {fileID: 1338707876}
   - {fileID: 1725420541}
   m_Father: {fileID: 875984358}
-  m_RootOrder: 4
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -5975,6 +5976,14 @@ MonoBehaviour:
   slotButtons: []
   selected: {fileID: 0}
   assetsIndex: 0
+--- !u!222 &643987519
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 643987516}
+  m_CullTransparentMesh: 1
 --- !u!1 &703109308
 GameObject:
   m_ObjectHideFlags: 0
@@ -7344,7 +7353,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &875984358
 RectTransform:
   m_ObjectHideFlags: 0
@@ -7357,11 +7366,11 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1006971604}
-  - {fileID: 495324921}
-  - {fileID: 1987102126}
-  - {fileID: 542465024}
   - {fileID: 643987517}
+  - {fileID: 1987102126}
   - {fileID: 516225171}
+  - {fileID: 542465024}
+  - {fileID: 495324921}
   m_Father: {fileID: 1784520098}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -8343,6 +8352,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1006971604}
   - component: {fileID: 1006971605}
+  - component: {fileID: 1006971606}
   m_Layer: 5
   m_Name: tops_carousel
   m_TagString: Untagged
@@ -8398,6 +8408,14 @@ MonoBehaviour:
   slotButtons: []
   selected: {fileID: 0}
   assetsIndex: 0
+--- !u!222 &1006971606
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1006971603}
+  m_CullTransparentMesh: 1
 --- !u!1 &1014502619
 GameObject:
   m_ObjectHideFlags: 0
@@ -15414,14 +15432,14 @@ RectTransform:
   m_GameObject: {fileID: 1725420540}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.85, y: 0.85, z: 1}
   m_Children: []
   m_Father: {fileID: 643987517}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -1, y: -1}
+  m_AnchoredPosition: {x: -215.4, y: -152.7}
   m_SizeDelta: {x: 75.22, y: 91.91}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1725420542
@@ -15727,14 +15745,14 @@ RectTransform:
   m_GameObject: {fileID: 1753007027}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.86, y: 0.86, z: 1}
   m_Children: []
   m_Father: {fileID: 1987102126}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -1, y: -1}
+  m_AnchoredPosition: {x: 144.1, y: 5.6}
   m_SizeDelta: {x: 75.22, y: 91.91}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1753007029
@@ -17795,14 +17813,14 @@ RectTransform:
   m_GameObject: {fileID: 1918269767}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.8, y: 0.8, z: 1}
   m_Children: []
   m_Father: {fileID: 1006971604}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -1, y: -1}
+  m_AnchoredPosition: {x: -215.4, y: 6.4}
   m_SizeDelta: {x: 75.22, y: 91.91}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1918269769
@@ -18636,6 +18654,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1987102126}
   - component: {fileID: 1987102127}
+  - component: {fileID: 1987102128}
   m_Layer: 5
   m_Name: sleeves_carousel
   m_TagString: Untagged
@@ -18687,6 +18706,14 @@ MonoBehaviour:
   slotButtons: []
   selected: {fileID: 0}
   assetsIndex: 0
+--- !u!222 &1987102128
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1987102125}
+  m_CullTransparentMesh: 1
 --- !u!1 &1998376678
 GameObject:
   m_ObjectHideFlags: 0
