@@ -70,17 +70,19 @@ public class DressupModel : MonoBehaviour
     public void ChangeHair(Sprite textureFront, Sprite textureBack, Sprite colourableFront, Sprite colourableBack)
     {
         //Set the key, which will reference the game object with the sprite to change
-        ICollection<string> keys = lipsReferences.Keys;
+        ICollection<string> keys = hairReferences.Keys;
 
         foreach (string key in keys)
         {
             switch (key)
             {
                 case "texture_front":
-                    hairReferences[key].GetComponent<Image>().sprite = textureFront;
+                    if (textureFront != null) hairReferences[key].GetComponent<Image>().sprite = textureFront;
+                    else hairReferences[key].GetComponent<Image>().sprite = blank;
                     break;
                 case "texture_back":
-                    hairReferences[key].GetComponent<Image>().sprite = textureBack;
+                    if (textureBack != null) hairReferences[key].GetComponent<Image>().sprite = textureBack;
+                    else hairReferences[key].GetComponent<Image>().sprite = blank;
                     break;
                 case "colourable_front":
                     hairReferences[key].GetComponent<Image>().sprite = colourableFront;
