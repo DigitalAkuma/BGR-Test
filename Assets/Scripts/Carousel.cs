@@ -48,7 +48,8 @@ public class Carousel : MonoBehaviour
 
         while (valid == true)
         {
-            //Array of 2D Sprites[] from Resources/DressUpAssets/
+            //Grab a new sprite array at each iteration ... If it doesn't exist break loop
+            //Array of 2D Sprites[] from Resources/DressUpAssets/name/name[i]
             //This loop searches for thumbnail textures to place into the slots
             Sprite[] allResources = Resources.LoadAll<Sprite>("DressUpAssets/" + name + "/" + name + i); 
             if (allResources != null && allResources.Length != 0)
@@ -65,7 +66,7 @@ public class Carousel : MonoBehaviour
                         currentDict.Add(texture.name, texture);
                     }
                 }
-                //dictionary contains all textures - referenced by their name
+                //dictionary contains all textures for corresponding carousel - referenced by their name
                 assetsDictionaryList.Add(currentDict); 
                 i++;
             }
@@ -75,7 +76,8 @@ public class Carousel : MonoBehaviour
             }
         }
 
-        this.resourceCount = i - 1;
+        //the number of subfolders = number of resources
+        this.resourceCount = i - 1; 
 
         moveButtons = new List<Button>();
         slotButtons = new List<Button>();
@@ -121,6 +123,7 @@ public class Carousel : MonoBehaviour
     }
 
     //Slot button clicked - selects a thumbnail
+    //Selected game object's parent becomes the selected slot button (myButton)
     void SlotButtonClicked(Button myButton)
     {
         if (myButton.gameObject.transform.Find("selected"))
