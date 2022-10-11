@@ -164,15 +164,36 @@ public class Carousel : MonoBehaviour
                 break;
             case "lips":
                 DressUpTextureBundle lipsBundle = assetPool.lips[thumbnail];
-                dressupModel.ChangeLips(lipsBundle.texture, lipsBundle.colourable);
+                dressupModel.Change(name, lipsBundle.texture, lipsBundle.colourable);
                 break;
-            case "tops": break;
-            case "bottoms": break;
-            case "sleeves": break;
-            case "shoes": break;
-            case "purses": break;
-            case "jewelry": break;
-            case "more": break;
+            case "tops": 
+                DressUpTextureBundle topsBundle = assetPool.tops[thumbnail];
+                dressupModel.Change(name, topsBundle.texture, topsBundle.colourable);
+                break;
+            case "bottoms":
+                DressUpTextureBundle bottomsBundle = assetPool.bottoms[thumbnail];
+                dressupModel.Change(name, bottomsBundle.texture, bottomsBundle.colourable);
+                break;
+            case "sleeves":
+                DressUpTextureBundle sleevesBundle = assetPool.sleeves[thumbnail];
+                dressupModel.Change(name, sleevesBundle.texture, sleevesBundle.colourable);
+                break;
+            case "shoes":
+                DressUpTextureBundle shoesBundle = assetPool.shoes[thumbnail];
+                dressupModel.Change(name, shoesBundle.texture, shoesBundle.colourable);
+                break;
+            case "purses":
+                DressUpTextureBundle pursesBundle = assetPool.purses[thumbnail];
+                dressupModel.Change(name, pursesBundle.texture, pursesBundle.colourable);
+                break;
+            case "jewelry":
+                DressUpTextureBundle jewelryBundle = assetPool.jewelry[thumbnail];
+                dressupModel.Change(name, jewelryBundle.texture, jewelryBundle.colourable);
+                break;
+            case "more":
+                DressUpTextureBundle moreBundle = assetPool.more[thumbnail];
+                dressupModel.Change(name, moreBundle.texture, moreBundle.colourable);
+                break;
 
         }
     }

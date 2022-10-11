@@ -57,21 +57,58 @@ public class DressupModel : MonoBehaviour
         
     }
 
-    public void ChangeLips(Sprite texture, Sprite colourable)
+    public void Change(string type, Sprite texture, Sprite colourable)
     {
         //Set the key, which will reference the game object with the sprite to change
-        ICollection<string> keys = lipsReferences.Keys;
+        ICollection<string> keys = null;
+        StringGameObjectDictionary references = null;
+
+        switch (type)
+        {
+            case "lips":
+                keys = lipsReferences.Keys;
+                references = lipsReferences;
+                break;
+            case "tops":
+                keys = topsReferences.Keys;
+                references = topsReferences;
+                break;
+            case "bottoms":
+                keys = bottomsReferences.Keys;
+                references = bottomsReferences;
+                break;
+            case "sleeves":
+                keys = sleevesReferences.Keys;
+                references = sleevesReferences;
+                break;
+            case "shoes":
+                keys = shoesReferences.Keys;
+                references = shoesReferences;
+                break;
+            case "purses":
+                keys = pursesReferences.Keys;
+                references = pursesReferences;
+                break;
+            case "jewelry":
+                keys = jewelryReferences.Keys;
+                references = jewelryReferences;
+                break;
+            case "more":
+                keys = moreReferences.Keys;
+                references = moreReferences;
+                break;
+        }
 
         foreach (string key in keys)
         {
             switch (key)
             {
                 case "texture":
-                    if (texture != null) lipsReferences[key].GetComponent<Image>().sprite = texture;
-                    else lipsReferences[key].GetComponent<Image>().sprite = blank;
+                    if (texture != null) references[key].GetComponent<Image>().sprite = texture;
+                    else references[key].GetComponent<Image>().sprite = blank;
                     break;
                 case "colourable":
-                    lipsReferences[key].GetComponent<Image>().sprite = colourable;
+                    references[key].GetComponent<Image>().sprite = colourable;
                     break;
             }
         }
