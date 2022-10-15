@@ -2383,7 +2383,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac5015b1b427ad941b38a9c42e7e1806, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  name: shoes_carousel
+  name: more_carousel
   wheel: {fileID: 398233578}
   slotCount: 2
   resourceCount: 0
