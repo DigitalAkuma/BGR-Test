@@ -8,7 +8,7 @@ public class ColorCarousel : MonoBehaviour
     public string name;  //"hair_carousel" but only hair is grabbed
     public List<Button> moveButtons;
     public List<Slot> slots; //slots positioned in inspector, children of this transform
-    GameObject selected; //the gameobject of the selection image
+   // GameObject selected; //the gameobject of the selection image
 
     //Reference to game object colourables
     public List<GameObject> colourables;
@@ -40,7 +40,7 @@ public class ColorCarousel : MonoBehaviour
                 break;
         }
 
-        selected = this.transform.Find("color_selected").gameObject; //thumbnail dashes
+        //selected = this.transform.Find("color_selected").gameObject; //thumbnail dashes
 
         int i = 0;
         Slot newSlot;
@@ -73,7 +73,7 @@ public class ColorCarousel : MonoBehaviour
      */
     void SlotButtonClicked(Button button, Slot givenSlot)
     {
-        selected.transform.localPosition = new Vector3(-1, -1, 0);
+        //selected.transform.localPosition = new Vector3(-1, -1, 0);
         foreach (GameObject colourable in colourables)
         {
             colourable.GetComponent<Image>().color = button.gameObject.GetComponent<Image>().color;
