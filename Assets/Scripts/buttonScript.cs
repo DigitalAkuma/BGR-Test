@@ -12,9 +12,14 @@ public class buttonScript : MonoBehaviour
     [DllImport("user32.dll")]
     private static extern IntPtr GetActiveWindow();
 
+    GameObject currentStep;
+    Transform[] currentStepTransforms;
+
     void Start()
     {
-        PlayerPrefs.SetString("CurrentStep", "step0");
+        //PlayerPrefs.SetString("CurrentStep", "step0");
+        currentStep = GameObject.Find("step1");
+        currentStepTransforms = currentStep.GetComponentsInChildren<Transform>();
     }
 
     public void LoadScene(string newScene)
@@ -25,8 +30,8 @@ public class buttonScript : MonoBehaviour
 
     public void SwitchStep(string step)
     {
-        GameObject currentStep = GameObject.Find(PlayerPrefs.GetString("CurrentStep"));
-        Transform[] currentStepTransforms = currentStep.GetComponentsInChildren<Transform>();
+        //GameObject currentStep = GameObject.Find(PlayerPrefs.GetString("CurrentStep"));
+        
         GameObject newStep = GameObject.Find(step);
         Transform[] newStepTransforms = newStep.GetComponentsInChildren<Transform>();
 
@@ -39,7 +44,10 @@ public class buttonScript : MonoBehaviour
             child.gameObject.SetActive(true);
         }
 
-        PlayerPrefs.SetString("CurrentStep", step);
+        //PlayerPrefs.SetString("CurrentStep", step);
+
+        currentStep = newStep;
+        currentStepTransforms = newStepTransforms;
     }
 
     public void OpenURL(string link)
