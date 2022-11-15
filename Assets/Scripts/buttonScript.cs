@@ -18,7 +18,7 @@ public class buttonScript : MonoBehaviour
     void Start()
     {
         //PlayerPrefs.SetString("CurrentStep", "step0");
-        currentStep = GameObject.Find("step1");
+        currentStep = GameObject.Find("step0");
         currentStepTransforms = currentStep.GetComponentsInChildren<Transform>();
     }
 
