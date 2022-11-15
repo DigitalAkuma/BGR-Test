@@ -2,10 +2,8 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Windows;
 using System.IO;
 using System.Linq;
-using static UnityEngine.Rendering.VirtualTexturing.Debugging;
 
 /*
  * Data structure for all dress up assets grabbed from Resources folder
